@@ -7,6 +7,9 @@ Intro:
 Details:
 	Fcrypt use AES in ECB mode.
 
+Dependence:
+	Python3,PyCrypto
+
 Usage:
 	./fcrypt.py 
 	
