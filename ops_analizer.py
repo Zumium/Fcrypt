@@ -59,7 +59,8 @@ def anal_options():
 	return op_details
  
 def show_help():
-	print("fcrypt----A Simple file encrypt/decrypt tool which is just for fun!\n\
+	print("Frcypt Copyright (C) 2015 Zumium\n\n\
+fcrypt----A Simple file encrypt/decrypt tool.\n\
 options:\n\
 -k\tpassword\n\
 -f\tinput file name\n\
