@@ -4,6 +4,9 @@ Dependence:
 	Python3
 	PyCrypto
 
+Usage:
+	./fcrypt.py -h
+
 License:
 	Copyright (C) 2015 Zumium
 	
