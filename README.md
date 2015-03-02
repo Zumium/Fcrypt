@@ -9,12 +9,12 @@ Usage:
 
 ./fcrypt.py 
 
--h 	Show help
--f	Source file
--o	Output file
--a	Operation.Use 'Encrypt' or 'Decrypt'
--k	Password
--r 	remove the source file when done
+	-h	Show help
+	-f	Source file
+	-o	Output file
+	-a	Operation.Use 'Encrypt' or 'Decrypt'
+	-k	Password
+	-r 	remove the source file when done
 
 License:
 
