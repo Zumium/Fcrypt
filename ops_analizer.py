@@ -22,8 +22,14 @@
 import sys
 
 def anal_options():
-	if '-h' in sys.argv:
+	if len(sys.argv)==1:
 		show_help()
+		exit()
+	elif '-h' in sys.argv:
+		show_help()
+		exit()
+	elif '-v' in sys.argv:
+		show_version_info()
 		exit()
 	elif '-o' not in sys.argv:
 		print('Must input the output file name')
@@ -59,11 +65,18 @@ def anal_options():
 	return op_details
  
 def show_help():
-	print("Frcypt Copyright (C) 2015 Zumium\n\n\
-fcrypt----A Simple file encrypt/decrypt tool.\n\
+	print("fcrypt----A Simple file encrypt/decrypt tool.\n\
 options:\n\
 -k\tpassword\n\
 -f\tinput file name\n\
 -o\toutput file name\n\
 -a\toptions:encrypt or decrypt\n\
--r\tdelete the source file")
+-r\tdelete the source file\n\
+-v\tshow version info")
+
+def show_version_info():
+	print("Version:1.1\n\n\
+Copyright (C) 2015 Zumium\n\n\
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\n\
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\n\
+You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.")
