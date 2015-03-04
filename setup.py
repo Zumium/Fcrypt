@@ -10,7 +10,7 @@ setup(
 	url='https://github.com/Zumium/Fcrypt',
 	packages=['Fcrypt'],
 	package_data={
-		'fcrypt':['README.md','COPYING']
+		'Fcrypt':['README.md','COPYING']
 	},
 	entry_points="""
 	[console_scripts]
