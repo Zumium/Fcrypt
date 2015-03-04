@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 ##
 #    fcrypt.py - the main file of this program
 #
@@ -19,11 +21,9 @@
 #    along with Fcrypt.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-#! /usr/bin/env python3
-
-import ops_analizer
-import ciphers
-import file_io
+from Fcrypt import ops_analizer
+from Fcrypt import ciphers
+from Fcrypt import file_io
 import os
 
 def main() :
@@ -45,5 +45,5 @@ def main() :
 	if options[4]=='True' :
 		os.remove(options[0])
 
-if __name__=='__main__' :
+if __name__ == '__main__' :
 	main()
