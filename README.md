@@ -2,7 +2,9 @@ Fcrypt  --A simple file encryption/decryption tool
 
 Dependence:
 
-Python3, PyCrypto
+Python3
+
+PyCrypto
 
 Install:
 	python3 setup.py install
@@ -14,7 +16,8 @@ fcrypt
 	-h	Show help
 	-f	Source file
 	-o	Output file
-	-a	Operation.Use 'Encrypt' or 'Decrypt'
+	-e 	Encrypt
+	-d	Decrypt
 	-k	Password
 	-r 	remove the source file when done
 

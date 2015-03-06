@@ -40,42 +40,49 @@ def anal_options():
 	elif '-f' not in sys.argv:
 		print('Must input the input file name')
 		exit()
-	elif '-a' not in sys.argv:
-		print('Must input the option:  encrypt or decrypt')
+	elif '-d' not in sys.argv and '-e' not in sys.argv:
+		print('Must input the option:  -e for encrypt or -d for decrypt')
 		exit()
 ##########################################################
 ##	Format:
 ##	input filename,operation,password,output filename
 ##########################################################
 
-	op_details=[]
+	is_rm_src='False'
+#	input_file=''
+#	output_file=''
+#	passwd=''
+#	operation=''
+
 	for index in range(0,len(sys.argv)) :
 		if sys.argv[index]=='-f' :
-			op_details.insert(0,sys.argv[index+1])
-		elif sys.argv[index]=='-a' :
-			op_details.insert(1,sys.argv[index+1])
+			input_file=sys.argv[index+1]
+		elif sys.argv[index]=='-e' :
+			operation='encrypt'
+		elif sys.argv[index]=='-d' :
+			operation='decrypt'
 		elif sys.argv[index]=='-k' :
-			op_details.insert(2,sys.argv[index+1])
+			passwd=sys.argv[index+1]
 		elif sys.argv[index]=='-o' :
-			op_details.insert(3,sys.argv[index+1])
+			output_file=sys.argv[index+1]
 		elif sys.argv[index]=='-r' :
-			op_details.insert(4,'True')
-	if len(op_details)==4 :
-		op_details.insert(4,'False')
+			is_rm_src='True'
+	op_details=[input_file,operation,passwd,output_file,is_rm_src]
 	return op_details
  
 def show_help():
 	print("fcrypt----A Simple file encrypt/decrypt tool.\n\
 options:\n\
--k\tpassword\n\
--f\tinput file name\n\
--o\toutput file name\n\
--a\toptions:encrypt or decrypt\n\
+-k password\tpassword\n\
+-f input_filename\tinput file name\n\
+-o output_filename\toutput file name\n\
+-e\tencrypt\n\
+-d\tdecrypt\n\
 -r\tdelete the source file\n\
 -v\tshow version info")
 
 def show_version_info():
-	print("Version:1.1\n\n\
+	print("Version:1.2\n\n\
 Copyright (C) 2015 Zumium\n\n\
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\n\
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\n\

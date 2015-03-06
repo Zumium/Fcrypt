@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name="fcrypt",
-	version="1.1",
+	version="1.2",
 	license="http://www.gnu.org/licenses/gpl",
 	description="A simple file encrypt/decrypt tool",
 	author='Zumium',
