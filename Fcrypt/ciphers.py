@@ -52,9 +52,14 @@ def get_real_passwd(passwd) :
 			passwd+=gene_hash_random_str(passwd,(leng//16+1)*16-leng)
 			return passwd
 
-def gene_cipher(passwd) :
+def gene_cipher(passwd,mode) :
 	r_passwd=get_real_passwd(passwd)
-	ci=AES.new(r_passwd,AES.MODE_ECB)
+	if mode=='aes-ecb':
+		ci=AES.new(r_passwd,AES.MODE_ECB)
+	elif mode=='aes-cbc':
+		ci=AES.new(r_passwd,AES.MODE_CBC,gene_iv(r_passwd))
+	elif mode=='aes-cfb' :
+		ci=AES.new(r_passwd,AES.MODE_CFB,gene_iv(r_passwd))
 	return ci
 
 def do_encrypt(cipher,data_raw):
@@ -69,3 +74,9 @@ def fill_data(raw_data):
 	if length_raw_data%16!=0 :
 		filled_data+=gene_random_str((length_raw_data//16+1)*16-length_raw_data)
 	return filled_data,length_raw_data
+
+def gene_iv(passwd):
+	hasher=SHA256.new()
+	hasher.update(passwd)
+	raw_str=hasher.digest()
+	return raw_str[:AES.block_size]
