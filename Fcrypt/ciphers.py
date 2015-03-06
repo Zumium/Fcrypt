@@ -23,13 +23,6 @@ from Crypto.Cipher import AES,Blowfish
 from Crypto import Random
 from Crypto.Hash import SHA256
 
-def gene_str(length) :
-	str=''
-	for x in range(0,length):
-		str+='X'
-	str_bytes=str.encode('UTF-16')
-	return str_bytes[:length]
-
 def gene_random_str(length) :
 	return Random.new().read(length)
 
@@ -74,5 +67,5 @@ def fill_data(raw_data):
 	length_raw_data=len(raw_data)
 	filled_data=raw_data
 	if length_raw_data%16!=0 :
-		filled_data+=gene_str((length_raw_data//16+1)*16-length_raw_data)
+		filled_data+=gene_random_str((length_raw_data//16+1)*16-length_raw_data)
 	return filled_data,length_raw_data
