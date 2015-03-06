@@ -85,6 +85,7 @@ options:\n\
 -k password\tpassword\n\
 -f input_filename\tinput file name\n\
 -o output_filename\toutput file name\n\
+-m mode\tencryption mode.Use 'aes-ecb''aes-cbc''aes-cfb'\n\
 -e\tencrypt\n\
 -d\tdecrypt\n\
 -r\tdelete the source file\n\

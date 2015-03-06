@@ -19,7 +19,8 @@ fcrypt
 	-e 	Encrypt
 	-d	Decrypt
 	-k	Password
-	-r 	remove the source file when done
+	-r 	Remove the source file when done
+	-m	Encryption mode.Use 'aes-ecb' or 'aes-cbc' or 'aes-cfb'
 
 License:
 
