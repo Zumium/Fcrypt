@@ -8,9 +8,12 @@ PyCrypto
 
 __Instal__
 ---
-python3 setup.py install
+	sudo python3 setup.py install
 
+__Uninstall__
 ---
+	sudo pip3 uninstall fcrypt
+
 __Usage__
 ---
 	fcrypt 
