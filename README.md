@@ -1,4 +1,5 @@
-#Fcrypt  --A simple file encryption/decryption tool
+#Fcrypt
+Fcrypt  --A simple file encryption/decryption tool
 
 __Dependence__
 ---
