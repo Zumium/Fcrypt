@@ -7,7 +7,9 @@ Python3
 PyCrypto
 
 __Instal__
-	python3 setup.py install
+---
+python3 setup.py install
+
 ---
 __Usage__
 ---
@@ -23,7 +25,7 @@ __Usage__
 	-m	Encryption mode.Use 'aes-ecb' or 'aes-cbc' or 'aes-cfb'
 
 __License__
-
+---
 Copyright (C) 2015 Zumium <martin007323@gmail.com>
 	
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
